@@ -1,0 +1,48 @@
+.img {
+  height: 200px; 
+}
+
+#panel {
+    position: absolute;
+    width: 99vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dropDownDiv {
+    padding: 5px;
+}
+
+#animation {
+    display: inline-block;
+    position: absolute;
+    width: 33vw;
+    height: 250px;
+}
+
+#title{
+    overflow: hidden;
+    border-right: .05em solid black;
+    white-space: nowrap;
+    margin:200px 0 0 550px;
+    animation: colorchange 10s infinite,typing 7s steps(35, end) forwards infinite, blinking .8s infinite;
+}
+
+
+@keyframes colorchange {
+  0%   {color: rgba(184, 41, 41, 0.918);}
+  25%  {color: rgba(192, 192, 20, 0.842);}
+  50%  {color: rgba(55, 55, 109, 0.836);}
+  100% {color: rgba(2, 117, 2, 0.911);}
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: calc(100% - 1em) }
+}
+
+@keyframes blinking {
+  from { border-color: transparent }
+  to { border-color: black; }
+}
